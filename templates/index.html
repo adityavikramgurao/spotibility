@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with indexlanding page.">
+    <meta name="author" content="Ady">
+    <title>Spotibility : Spot A Friend</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/themify-icons/css/themify-icons.css') }}">
+    <!-- Bootstrap + index main styles -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }} ">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Spot a FRIEND :) </a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">Spotibility!</span>
+                <span class="down">CS539 Project</span>
+            </h1>
+            <p class="header-subtitle">By Tess, Gabrielle, Agustina, Uday, Adityavikram </p>            
+        </div>              
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="{{ url_for('static', filename='assets/imgs/spotify-logo.png') }} " class="about-img">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle"></p>
+                    <h2 class="section-title mb-3">What is Spotibility?</h2>
+                    <p>
+                        We are proposing a tool to generate ‘friendships’ based on musical preferences
+and playlist composition of Spotify users. The tool will take a user’s Spotify playlist(s) as input
+and create matches with other Spotify users based on an algorithmic compatibility of the audio
+features of songs within each playlist. 
+                        <br>              
+                    </p>
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle"></p>
+            <h6 class="section-title mb-5">Please give us your name and Spotify playlist</h6>
+            <!-- contact form -->
+            <form action="/test/" method="POST" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input type="text" size="50" name="iname" class="form-control" placeholder="Your Name" required>                 
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="url" class="form-control" name="iurl" id="url" placeholder="https://open.spotify" pattern="https://open.spotify.*" size="100" required >
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Find your potential Friend" class="btn btn-outline-primary rounded" onclick="script.py">                  
+                    </div>
+                </div>  
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; Ady24</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="{{ url_for('static', filename='assets/vendors/jquery/jquery-3.4.1.js') }}  "></script>
+    <script src="{{ url_for('static', filename='assets/vendors/bootstrap/bootstrap.bundle.js')}}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{{ url_for('static', filename='assets/vendors/bootstrap/bootstrap.affix.js')}} "></script>
+
+    <!-- index js -->
+    <script src="{{ url_for('static', filename='assets/js/index.js')}} "></script>
+
+</body>
+</html>
